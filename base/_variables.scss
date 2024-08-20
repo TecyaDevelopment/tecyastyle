@@ -113,6 +113,19 @@ $sizes: (
 
 // Greyscale
 $grayscale:(
+  100: #F1F1F2,
+  200: #D5D5D6,
+  300: #B8B9BA,
+  400: #9C9D9E,
+  500: #808182,
+  600: #646465,
+  700: #484849,
+  800: #2B2C2D,
+  900: #0F1011
+);
+
+// DEPRECATED
+$grayscale-deprecated:(
   100: #F4F3F3,
   200: #D4D2D2,
   300: #B3B2B2,
