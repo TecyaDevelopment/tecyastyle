@@ -1,0 +1,16 @@
+@mixin box-shadow-creator($pocx, $pocy, $blur, $spread, $color) {
+  box-shadow: $pocx $pocy $blur $spread rgba($color, 0.25);
+}
+
+@mixin drop-shadow-creator($pocx, $pocy, $blur, $color) {
+  filter: drop-shadow($pocx $pocy $blur rgba($color, 0.25));
+}
+
+// Uso de los mixins
+.window-close {
+  @include box-shadow-creator(0px, 4px, 4px, 0px, black);
+}
+
+.element-close {
+  @include drop-shadow-creator(0px, 4px, 4px, black);
+}

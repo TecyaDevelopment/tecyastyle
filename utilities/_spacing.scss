@@ -1,0 +1,5 @@
+// Padding generator
+@include spacing-generator($sizes, 'padding');
+
+// Margin generator
+@include spacing-generator($sizes, 'margin');
