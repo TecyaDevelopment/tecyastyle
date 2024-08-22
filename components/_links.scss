@@ -116,5 +116,6 @@ ul.wide-link-dark {
   );
   background-color: map-get($grayscale, 900);
   font-weight: bold;
+  height: 100vh; // Editado para el sidebar
 
 }
