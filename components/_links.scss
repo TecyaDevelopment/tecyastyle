@@ -91,11 +91,11 @@ $link-colors: primary, secondary;
 // Common links
 
 .link-primary{
-  @include master-link-creator(map-get($primary, 500), map-get($primary, 300));
+  @include master-link-creator(map-get($primary, 700), map-get($primary, 500));
 }
 
 .link-secondary{
-  @include master-link-creator(map-get($secondary, 500), map-get($secondary, 300));
+  @include master-link-creator(map-get($secondary, 700), map-get($secondary, 500));
 }
 
 // Wide links
