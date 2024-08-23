@@ -17,56 +17,35 @@
 
 
   <body>
-    <div class="container">
-      <center><header>
-        <h1 class="mb-4">Componentes: Desarrollo Tecya (Sidebar)</h1>
-      </header>
-      <h2>Navbar</h2>
-      </center>
-      <center><header>
-        <h1 class="mb-4">Componentes: Desarrollo Tecya (Sidebar)</h1>
-      </header>
-      <h2>Navbar</h2>
-      </center>      <center><header>
-        <h1 class="mb-4">Componentes: Desarrollo Tecya (Sidebar)</h1>
-      </header>
-      <h2>Navbar</h2>
-      </center>      <center><header>
-        <h1 class="mb-4">Componentes: Desarrollo Tecya (Sidebar)</h1>
-      </header>
-      <h2>Navbar</h2>
-      </center>      <center><header>
-        <h1 class="mb-4">Componentes: Desarrollo Tecya (Sidebar)</h1>
-      </header>
-      <h2>Navbar</h2>
-      </center>      <center><header>
-        <h1 class="mb-4">Componentes: Desarrollo Tecya (Sidebar)</h1>
-      </header>
-      <h2>Navbar</h2>
-      </center>      <center><header>
-        <h1 class="mb-4">Componentes: Desarrollo Tecya (Sidebar)</h1>
-      </header>
-      <h2>Navbar</h2>
-      </center>
-    </div>
 
 
-    <div id="sidebar">
+  <!---Comienza el Sidebar---->
+    <div id="sidebar" class="w-fit">
       <ul class="wide-link-dark">
-        <div id="toggle-btn">
-            <i class="fa fa-bars" aria-hidden="true"></i>
-        </div>
-        <!---Titulo Nombre empresa actual y su Icono agregado con Link---->
-        <li>
-          <h6>Empresa actual</h3>
-        </li>
 
-        <!----Icono y texto listado------>
+        <!--Boton menu hamburquesa   (Debe pincharse y achicarse)-->
+        <div id="toggle-btn">
+            <i class="fa fa-bars text-gray-300 fs-3xl" aria-hidden="true"></i>
+        </div>
+        <!--FIN Boton menu hamburquesa-->
+
+
+        <!--Espaciado-->
+
+
+        <!---Titulo Nombre empresa actual y su Icono agregado con Link---->
+        <!--Titulo-->
+        
+        <div class="title-nav">
+          <h6 class="text-gray-200">Empresa actual</h6>
+        </div>
+        <!---FIN titulo -->
+         <!----Icono y texto listado------>
         <li>
           <a href="#">
             <span>
               <i class="fas fa-circle"></i>
-              Nombre de la empresa 
+              <p>Nombre de la empresa</p> 
             </span>
           </a>
         </li>
@@ -78,21 +57,21 @@
         <hr class="divider border">
         <!---FIN LINEA DIVISORA-->
 
-        <!--Seccion Listado empresas-->
-        <li>
-          <a href="#">
+        <!-- Sección Listado Empresas debe ser un botón colapsable -->
+        <li id="empresas-section" class="collapsible">
+          <a href="#" id="empresas-toggle">
             <span>
               <i class="fas fa-briefcase"></i>
               Empresas
             </span>
-            <div><i class="fas fa-chevron-down"></i></div>
+            <div><i id="empresas-icon" class="fas fa-chevron-down"></i></div>
           </a>
-          <ul>
+          <ul id="empresas-list">
             <li>
               <a href="#">
                 <span>
                   <i class="fas fa-circle"></i>
-                  Nombre de la empresa 
+                  Nombre de la empresa
                 </span>
               </a>
             </li>
@@ -100,7 +79,7 @@
               <a href="#">
                 <span>
                   <i class="fas fa-circle"></i>
-                  Nombre de la empresa 
+                  Nombre de la empresa
                 </span>
               </a>
             </li>
@@ -108,7 +87,7 @@
               <a href="#">
                 <span>
                   <i class="fas fa-circle"></i>
-                  Nombre de la empresa 
+                  Nombre de la empresa
                 </span>
               </a>
             </li>
@@ -119,16 +98,16 @@
                 </span>
               </a>
             </li>
-
           </ul>
         </li>
-        <!--FIN Seccion Listado empresas-->
+        <!-- FIN Sección Listado Empresas -->
 
         <!--LINEA DIVISORA-->
         <hr class="divider border">
         <!---FIN LINEA DIVISORA-->
 
-        <!--Listado de Secciones-->
+        <!--Listado de Secciones con vistas dedicadas-->
+        <!--Seccion de link a pagina de contratos-->
         <li>
           <a href="#">
             <span>
@@ -137,6 +116,8 @@
             </span>
           </a>
         </li>
+        <!--Fin seccion de contratos -->
+        <!--Seccion de link a pagina de liquidaciones -->
         <li>
           <a href="#">
             <span>
@@ -145,6 +126,7 @@
             </span>
           </a>
         </li>
+        <!--Seccion de link a pagina de Remuneraciones-->
         <li>
           <a href="#">
             <span>
@@ -153,30 +135,36 @@
             </span>
           </a>
         </li>
-        <li>
-            <a href="#">
+        <!--FIN seccion de link a pagina de remuneraciones -->
+
+
+        <!--SECCION DE INDICADORES COLAPASABLE -->
+        <li id="indicadores-section" class="collapsible">
+            <a href="#" id="indicadores-toggle">
               <span>
                 <i class="fas fa-bar-chart"></i>
                 Indicadores
               </span>
-              <div><i class="fas fa-chevron-down"></i></div>
+              <div><i id="indicadores-icon"  class="fas fa-chevron-down"></i></div>
             </a>
-          <ul>
+          <ul id="indicadores-list">
             <li><a href="#">Previsionales</a></li>
-            <li><a href="#">Impuesto de segunda categoría</a></li>
+            <li><a href="#">Impuesto de 2° categoría</a></li>
           </ul>
         </li>
+
+        <!--FIN SECCION COLAPSABLES-->
+
+
         <!--FIN Listado de Secciones-->
 
-                  <!--Seccion de marca e info de la empresa-->
-      <seccion>
-        <i></i>
-        <small>eContable 2024 - Tecya</small>
-        <link><br>
-          <small>Terminos legales</small><br>
-          <small>Soporte</small>
-        </link>
-      </seccion>
+      <!--Seccion de marca e info de la empresa debe cambiar al momento de colapsar-->
+      <div id="nosotros" class="w-fit seccion-nos d-flex flex-column gap-2">
+        <img src="image 189.png"></img>
+        <small class="text-gray-100 fs-xs">eContable 2024 - Tecya</small>
+        <small class="text-gray-100 fs-xs">Terminos legales</small>
+        <small class="text-gray-100 fs-xs">Soporte</small>
+      </div>
     <!--FIN Seccion de marca e info de la empresa-->
 
       </ul>
@@ -186,18 +174,30 @@
 
     <!-- Scripts -->
     <script>
-      // Ver, ocultar pass
-      eyeIcon = document.querySelector('#input-see-pass')
 
-      eyeIcon.addEventListener('click', () =>{
-        if (eyeIcon.classList.contains('fa-eye')){
-          eyeIcon.classList.remove('fa-eye')
-          eyeIcon.classList.add('fa-eye-low-vision')
-        } else{
-          eyeIcon.classList.remove('fa-eye-low-vision')
-          eyeIcon.classList.add('fa-eye')
-        }
-      })
+    //evento de colapsar las secciones
+    document.addEventListener('DOMContentLoaded', function() {
+      // Colapsable de Empresas
+      const empresasToggleButton = document.getElementById('empresas-toggle');
+      const empresasCollapsibleSection = document.getElementById('empresas-section');
+      const empresasChevronIcon = document.getElementById('empresas-icon');
+
+      empresasToggleButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        empresasCollapsibleSection.classList.toggle('open');
+      });
+
+      // Colapsable de Indicadores
+      const indicadoresToggleButton = document.getElementById('indicadores-toggle');
+      const indicadoresCollapsibleSection = document.getElementById('indicadores-section');
+      const indicadoresChevronIcon = document.getElementById('indicadores-icon');
+
+      indicadoresToggleButton.addEventListener('click', function(event) {
+        event.preventDefault();
+        indicadoresCollapsibleSection.classList.toggle('open');
+      });
+    });
+
     </script>
     
 

@@ -1,13 +1,89 @@
 
 /* Sidebar  */
 
+/* Sidebar  */
 #sidebar {
-    position: fixed;
-    width:320px;
-    top: 0;
-    left: 0;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.fa-bars {
+  color: grey;
+}/*# sourceMappingURL=style.css.map */
+
+
+
+/*Solo sidebar para pruebas */
+
+.title-nav h6 {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 52px;
+  margin-bottom: 0px;
+}
+
+.title-nav {
+  display: flex;
+  position: relative;
+  padding-left: 1rem;
+  justify-content: flex-start;
+}
+
+/*seccion de marca Tecya*/
+#nosotros {
+  position:fixed;
+  bottom: 50px;
+  left: 24px;
   
-  .fa-bars {
-    color: grey;
-  }
+}
+
+.seccion-nos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.seccion-nos img {
+  height: map-get($sizes, 5);
+}
+
+
+/*FIN seccion de marca Tecya*/
+
+/*CSS SOLO PARA LOS COLAPSABLES*/
+
+.collapsible ul {
+  display: none;
+  margin-top: 10px; /* Ajusta según sea necesario */
+}
+
+.collapsible.open ul {
+  display: block;
+}
+
+.collapsible .fa-chevron-down {
+  transition: transform 0.3s ease;
+}
+
+.collapsible.open .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+/* FIN CSS SOLO PARA LOS COLAPSABLES */
+
+
+
+/* FIN SOLO SIDEBAR PARA PRUEBAS */
+
+
+
+/*
+
+LISTA DE COMPONENTES PARA EL NAVBAR
+
+- 
+
+
+*/

@@ -28,10 +28,13 @@ $link-colors: primary, secondary;
 }
 
 @mixin wide-link-creator($text, $bg, $text-sub) {
+  /* ESTILOS GENERALES PARA LA LISTA */
   list-style: none;
-  padding: 0;
+  /* Padding general para el exterior del navbar*/
+  padding: map-get($sizes, 6) map-get($sizes, 5);
   margin: 0;
   
+  /* LOS ELEMENTOS DE LISTA SE CONSIDERAN COMPONENTES A PARTE, LOS MENU ITEM CONTAINER */
   > li, > li > ul > li {
     > a {
       transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
