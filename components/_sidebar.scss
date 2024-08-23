@@ -1,49 +1,95 @@
+// MIXIN
 
-/* Sidebar  */
+@mixin my-nav-item(){
+  width: 100%;
+  padding: map-get($sizes, 3) map-get($sizes, 2);
+  transition: all .15s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  font-size: map-get($sizes, 4);
+  justify-content: space-between;
+}
 
 /* Sidebar  */
 #sidebar {
   position: fixed;
   top: 0;
   left: 0;
+  background-color: map-get($grayscale, 900);
+  padding: map-get($sizes, 6) map-get($sizes, 5);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.fa-bars {
-  color: grey;
-}/*# sourceMappingURL=style.css.map */
+#main-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: map-get($sizes, 9);
+  hr {
+    margin: 0;
+  }
+
+  .inner-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: map-get($sizes, 2);
+  }
+
+}
+
+
+#toggle-btn{
+  width: 100%;
+  > i {
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
+  }
+}
+
+.my-nav-list, .my-nav-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: map-get($sizes, 4);
+}
+
+.nav-list-item {
+  @include my-nav-item();
+  span {
+    display: flex;
+    align-items: center;
+    gap: map-get($sizes, 4);
+  }
+  text-decoration: none;
+  color: map-get($grayscale, 300);
+
+  &:hover {
+    color: map-get($grayscale, 100);
+    background-color: map-get($grayscale, 800);
+    // color: map-get($map: $grayscale, $key: 400);
+  }
+  
+  &:focus-visible {
+    outline-style: none;
+    outline-width: 0px;
+    box-shadow: 0 0 0 .25rem rgba(map-get($primary, 500), 1);
+  }
+}
+
+.nav-list-toggler {
+  font-size: 1.25rem; // 20px
+  line-height: 1.75rem;
+  font-weight: map-get($map: $font-weights, $key: medium);
+}
 
 
 
 /*Solo sidebar para pruebas */
-
-.title-nav h6 {
-  font-weight: bold;
-  text-align: center;
-  margin-top: 52px;
-  margin-bottom: 0px;
-}
-
-.title-nav {
-  display: flex;
-  position: relative;
-  padding-left: 1rem;
-  justify-content: flex-start;
-}
-
-/*seccion de marca Tecya*/
-#nosotros {
-  position:fixed;
-  bottom: 50px;
-  left: 24px;
-  
-}
-
-.seccion-nos {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
-}
 
 .seccion-nos img {
   height: map-get($sizes, 5);
@@ -83,7 +129,13 @@
 
 LISTA DE COMPONENTES PARA EL NAVBAR
 
-- 
+- Label de empresa actual (id)
+- Seccion de empresa activa (id)
 
+- Icon label item (class), fixed | li > div/span
+- Icon label toggler (class), auto - (Icon label item + toggler) | li > div/span + div/span
+
+- icon + item (auto layouteable) div > img
 
 */
+

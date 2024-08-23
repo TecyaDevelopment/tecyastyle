@@ -21,153 +21,121 @@
 
   <!---Comienza el Sidebar---->
     <div id="sidebar" class="w-fit">
-      <ul class="wide-link-dark">
-
-        <!--Boton menu hamburquesa   (Debe pincharse y achicarse)-->
+      <section id="main-sidebar">
         <div id="toggle-btn">
             <i class="fa fa-bars text-gray-300 fs-3xl" aria-hidden="true"></i>
         </div>
-        <!--FIN Boton menu hamburquesa-->
-
-
-        <!--Espaciado-->
-
-
-        <!---Titulo Nombre empresa actual y su Icono agregado con Link---->
-        <!--Titulo-->
-        
-        <div class="title-nav">
-          <h6 class="text-gray-200">Empresa actual</h6>
-        </div>
-        <!---FIN titulo -->
-         <!----Icono y texto listado------>
-        <li>
-          <a href="#">
-            <span>
-              <i class="fas fa-circle"></i>
-              <p>Nombre de la empresa</p> 
-            </span>
-          </a>
-        </li>
-        <!----FIN Icono y texto listado------>
-
-        <!---FIN Titulo Nombre empresa actual y su Icono agregado con Link---->
-
-        <!--LINEA DIVISORA-->
-        <hr class="divider border">
-        <!---FIN LINEA DIVISORA-->
-
-        <!-- Sección Listado Empresas debe ser un botón colapsable -->
-        <li id="empresas-section" class="collapsible">
-          <a href="#" id="empresas-toggle">
-            <span>
-              <i class="fas fa-briefcase"></i>
-              Empresas
-            </span>
-            <div><i id="empresas-icon" class="fas fa-chevron-down"></i></div>
-          </a>
-          <ul id="empresas-list">
+        <ul class="my-nav-list">
+          <div class="title-nav">
+            <h6 class="text-gray-200" id="nav-empresa-actual">Empresa actual</h6>
+            
             <li>
-              <a href="#">
+              <a href="#" class="nav-list-item">
                 <span>
                   <i class="fas fa-circle"></i>
-                  Nombre de la empresa
+                  <p>Nombre de la empresa</p>
                 </span>
               </a>
             </li>
-            <li>
-              <a href="#">
-                <span>
-                  <i class="fas fa-circle"></i>
-                  Nombre de la empresa
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>
-                  <i class="fas fa-circle"></i>
-                  Nombre de la empresa
-                </span>
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span>
-                  Ver más
-                </span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <!-- FIN Sección Listado Empresas -->
-
-        <!--LINEA DIVISORA-->
-        <hr class="divider border">
-        <!---FIN LINEA DIVISORA-->
-
-        <!--Listado de Secciones con vistas dedicadas-->
-        <!--Seccion de link a pagina de contratos-->
-        <li>
-          <a href="#">
-            <span>
-              <i class="fas fa-users"></i>
-              Contratos
-            </span>
-          </a>
-        </li>
-        <!--Fin seccion de contratos -->
-        <!--Seccion de link a pagina de liquidaciones -->
-        <li>
-          <a href="#">
-            <span>
-              <i class="fas fa-file-alt"></i>
-              Liquidaciones
-            </span>
-          </a>
-        </li>
-        <!--Seccion de link a pagina de Remuneraciones-->
-        <li>
-          <a href="#">
-            <span>
-              <i class="fas fa-dollar-sign"></i>
-              Remuneraciones
-            </span>
-          </a>
-        </li>
-        <!--FIN seccion de link a pagina de remuneraciones -->
-
-
-        <!--SECCION DE INDICADORES COLAPASABLE -->
-        <li id="indicadores-section" class="collapsible">
-            <a href="#" id="indicadores-toggle">
+          </div>
+          <hr class="divider border">
+          <li id="empresas-section" class="collapsible">
+            <a href="#" id="empresas-toggle" class="nav-list-item nav-list-toggler">
               <span>
-                <i class="fas fa-bar-chart"></i>
-                Indicadores
+                <i class="fas fa-briefcase"></i>
+                Empresas
               </span>
-              <div><i id="indicadores-icon"  class="fas fa-chevron-down"></i></div>
+              <div>
+                <i id="empresas-icon" class="fas fa-chevron-down"></i>
+              </div>
             </a>
-          <ul id="indicadores-list">
-            <li><a href="#">Previsionales</a></li>
-            <li><a href="#">Impuesto de 2° categoría</a></li>
-          </ul>
-        </li>
+            <ul id="empresas-list" class="inner-sidebar">
+              <li>
+                <a href="#" class="nav-list-item">
+                  <span>
+                    <i class="fas fa-circle"></i>
+                    Nombre de la empresa
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-list-item">
+                  <span>
+                    <i class="fas fa-circle"></i>
+                    Nombre de la empresa
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-list-item">
+                  <span>
+                    <i class="fas fa-circle"></i>
+                    Nombre de la empresa
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-list-item">
+                  <span>
+                    Ver más
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <hr class="divider border">
+          <li>
+            <a href="#" class="nav-list-item nav-list-toggler">
+              <span>
+                <i class="fas fa-users"></i>
+                Contratos
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-list-item nav-list-toggler">
+              <span>
+                <i class="fas fa-file-alt"></i>
+                Liquidaciones
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-list-item nav-list-toggler">
+              <span>
+                <i class="fas fa-dollar-sign"></i>
+                Remuneraciones
+              </span>
+            </a>
+          </li>
+          <li id="indicadores-section" class="collapsible">
+              <a href="#" id="indicadores-toggle" class="nav-list-item nav-list-toggler">
+                <span>
+                  <i class="fas fa-bar-chart"></i>
+                  Indicadores
+                </span>
+                <div><i id="indicadores-icon"  class="fas fa-chevron-down"></i></div>
+              </a>
+            <ul id="indicadores-list">
+              <li>
+                <a href="#" class="nav-list-item">Previsionales</a>
+              </li>
+              <li>
+                <a href="#" class="nav-list-item">Impuesto de 2° categoría</a>
+              </li>
+            </ul>
+          </li>
+        
+        </ul>
+      </section>
 
-        <!--FIN SECCION COLAPSABLES-->
-
-
-        <!--FIN Listado de Secciones-->
-
-      <!--Seccion de marca e info de la empresa debe cambiar al momento de colapsar-->
       <div id="nosotros" class="w-fit seccion-nos d-flex flex-column gap-2">
         <img src="image 189.png"></img>
         <small class="text-gray-100 fs-xs">eContable 2024 - Tecya</small>
         <small class="text-gray-100 fs-xs">Terminos legales</small>
         <small class="text-gray-100 fs-xs">Soporte</small>
       </div>
-    <!--FIN Seccion de marca e info de la empresa-->
 
-      </ul>
     </div>
 
 

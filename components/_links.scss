@@ -15,9 +15,11 @@ $link-colors: primary, secondary;
   &:hover{
     color: $hover !important;
   }
+  
   &:active{
     color: $normal !important;
   }
+
   &:focus-visible, &:focus {
     color: $hover !important;
     outline: -webkit-focus-ring-color auto 1px;
@@ -29,11 +31,10 @@ $link-colors: primary, secondary;
 
 @mixin wide-link-creator($text, $bg, $text-sub) {
   /* ESTILOS GENERALES PARA LA LISTA */
-  list-style: none;
+
   /* Padding general para el exterior del navbar*/
-  padding: map-get($sizes, 6) map-get($sizes, 5);
-  margin: 0;
-  
+
+
   /* LOS ELEMENTOS DE LISTA SE CONSIDERAN COMPONENTES A PARTE, LOS MENU ITEM CONTAINER */
   > li, > li > ul > li {
     > a {
@@ -102,23 +103,3 @@ $link-colors: primary, secondary;
 }
 
 // Wide links
-
-ul.wide-link-light {
-  @include wide-link-creator(
-    map-get($grayscale, 900),
-    map-get($grayscale, 100),
-    map-get($grayscale, 900),
-  );
-}
-
-ul.wide-link-dark {
-  @include wide-link-creator(
-    map-get($grayscale, 300),
-    map-get($grayscale, 800),
-    map-get($grayscale, 100),
-  );
-  background-color: map-get($grayscale, 900);
-  font-weight: bold;
-  height: 100vh; // Editado para el sidebar
-
-}

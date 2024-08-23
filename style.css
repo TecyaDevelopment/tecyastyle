@@ -4,19 +4,18 @@
   box-sizing: border-box;
 }
 
-* *::before,
+*,
+*::before,
 *::after {
   box-sizing: inherit;
 }
 
 /*** Styles for Tecya Development ***/
 .w-fit {
-  width: -moz-fit-content;
   width: fit-content;
 }
 
 .h-fit {
-  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -2847,119 +2846,6 @@ p {
   box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
 }
 
-ul.wide-link-light {
-  /* ESTILOS GENERALES PARA LA LISTA */
-  list-style: none;
-  /* Padding general para el exterior del navbar*/
-  padding: 2rem 1.5rem;
-  margin: 0;
-  /* LOS ELEMENTOS DE LISTA SE CONSIDERAN COMPONENTES A PARTE, LOS MENU ITEM CONTAINER */
-}
-ul.wide-link-light > li > a, ul.wide-link-light > li > ul > li > a {
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  color: #0F1011;
-  text-decoration: none;
-}
-ul.wide-link-light > li > a:hover, ul.wide-link-light > li > ul > li > a:hover {
-  background-color: #F1F1F2;
-  color: #0F1011;
-}
-ul.wide-link-light > li > a:focus-visible, ul.wide-link-light > li > ul > li > a:focus-visible {
-  outline-style: none;
-  outline-width: 0px;
-  box-shadow: 0 0 0 0.25rem #ffc107;
-}
-ul.wide-link-light > li > a > span, ul.wide-link-light > li > ul > li > a > span {
-  display: flex;
-  align-items: center;
-}
-ul.wide-link-light > li > a > span > i, ul.wide-link-light > li > ul > li > a > span > i {
-  margin-right: 0.75rem;
-  text-align: center;
-  width: 24px;
-}
-ul.wide-link-light > li > a > div, ul.wide-link-light > li > ul > li > a > div {
-  text-align: center;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-ul.wide-link-light > li > a > div:hover, ul.wide-link-light > li > ul > li > a > div:hover {
-  color: white;
-}
-ul.wide-link-light > li > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-ul.wide-link-light > li > ul > li > a {
-  font-weight: 400;
-  color: #0F1011;
-}
-
-ul.wide-link-dark {
-  /* ESTILOS GENERALES PARA LA LISTA */
-  list-style: none;
-  /* Padding general para el exterior del navbar*/
-  padding: 2rem 1.5rem;
-  margin: 0;
-  /* LOS ELEMENTOS DE LISTA SE CONSIDERAN COMPONENTES A PARTE, LOS MENU ITEM CONTAINER */
-  background-color: #0F1011;
-  font-weight: bold;
-  height: 100vh;
-}
-ul.wide-link-dark > li > a, ul.wide-link-dark > li > ul > li > a {
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 0.75rem 1rem;
-  font-size: 1rem;
-  color: #B8B9BA;
-  text-decoration: none;
-}
-ul.wide-link-dark > li > a:hover, ul.wide-link-dark > li > ul > li > a:hover {
-  background-color: #2B2C2D;
-  color: #F1F1F2;
-}
-ul.wide-link-dark > li > a:focus-visible, ul.wide-link-dark > li > ul > li > a:focus-visible {
-  outline-style: none;
-  outline-width: 0px;
-  box-shadow: 0 0 0 0.25rem #ffc107;
-}
-ul.wide-link-dark > li > a > span, ul.wide-link-dark > li > ul > li > a > span {
-  display: flex;
-  align-items: center;
-}
-ul.wide-link-dark > li > a > span > i, ul.wide-link-dark > li > ul > li > a > span > i {
-  margin-right: 0.75rem;
-  text-align: center;
-  width: 24px;
-}
-ul.wide-link-dark > li > a > div, ul.wide-link-dark > li > ul > li > a > div {
-  text-align: center;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-ul.wide-link-dark > li > a > div:hover, ul.wide-link-dark > li > ul > li > a > div:hover {
-  color: white;
-}
-ul.wide-link-dark > li > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-ul.wide-link-dark > li > ul > li > a {
-  font-weight: 400;
-  color: #B8B9BA;
-}
-
 /*
 *
 * MIXINS A
@@ -2999,9 +2885,6 @@ input[type=date]:focus {
   border-color: #ffcd3e;
   box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
 }
-input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=number]::-moz-placeholder, input[type=file]::-moz-placeholder, input[type=date]::-moz-placeholder {
-  color: #808182;
-}
 input[type=text]::placeholder,
 input[type=email]::placeholder,
 input[type=password]::placeholder,
@@ -3033,9 +2916,6 @@ input[type=date]::placeholder {
   border-color: #ffcd3e !important;
   box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5) !important;
 }
-.ts-control::-moz-placeholder, .ts-dropdown .ts-control input::-moz-placeholder, .ts-dropdown input .ts-control:active::-moz-placeholder, .ts-dropdown:active::-moz-placeholder {
-  color: #808182;
-}
 .ts-control::placeholder,
 .ts-dropdown .ts-control input::placeholder,
 .ts-dropdown input .ts-control:active::placeholder,
@@ -3062,9 +2942,6 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   border-color: #ffcd3e;
   box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
 }
-input[type=radio]::-moz-placeholder, input[type=checkbox]::-moz-placeholder {
-  color: #808182;
-}
 input[type=radio]::placeholder, input[type=checkbox]::placeholder {
   color: #808182;
 }
@@ -3085,9 +2962,6 @@ input[type=radio]:checked, input[type=checkbox]:checked {
 .form-select:focus {
   border-color: #ffcd3e;
   box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
-}
-.form-select::-moz-placeholder {
-  color: #808182;
 }
 .form-select::placeholder {
   color: #808182;
@@ -3209,45 +3083,83 @@ input[type=radio]:checked, input[type=checkbox]:checked {
 }
 
 /* Sidebar  */
-/* Sidebar  */
 #sidebar {
   position: fixed;
   top: 0;
   left: 0;
-}
-
-.fa-bars {
-  color: grey;
-} 
-/*Solo sidebar para pruebas */
-.title-nav h6 {
-  font-weight: bold;
-  text-align: center;
-  margin-top: 52px;
-  margin-bottom: 0px;
-}
-
-.title-nav {
-  display: flex;
-  position: relative;
-  padding-left: 1rem;
-  justify-content: flex-start;
-}
-
-/*seccion de marca Tecya*/
-#nosotros {
-  position: fixed;
-  bottom: 50px;
-  left: 24px;
-}
-
-.seccion-nos {
+  background-color: #0F1011;
+  padding: 2rem 1.5rem;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
+  justify-content: space-between;
 }
 
+#main-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+#main-sidebar hr {
+  margin: 0;
+}
+#main-sidebar .inner-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#toggle-btn {
+  width: 100%;
+}
+#toggle-btn > i {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.my-nav-list, .my-nav-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.nav-list-item {
+  width: 100%;
+  padding: 0.75rem 0.5rem;
+  transition: all 0.15s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  font-size: 1rem;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #B8B9BA;
+}
+.nav-list-item span {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-list-item:hover {
+  color: #F1F1F2;
+  background-color: #2B2C2D;
+}
+.nav-list-item:focus-visible {
+  outline-style: none;
+  outline-width: 0px;
+  box-shadow: 0 0 0 0.25rem #ffc107;
+}
+
+.nav-list-toggler {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+}
+
+/*Solo sidebar para pruebas */
 .seccion-nos img {
   height: 1.5rem;
 }
@@ -3277,7 +3189,12 @@ input[type=radio]:checked, input[type=checkbox]:checked {
 
 LISTA DE COMPONENTES PARA EL NAVBAR
 
-- 
+- Label de empresa actual (id)
+- Seccion de empresa activa (id)
 
+- Icon label item (class), fixed | li > div/span
+- Icon label toggler (class), auto - (Icon label item + toggler) | li > div/span + div/span
+
+- icon + item (auto layouteable) div > img
 
 *//*# sourceMappingURL=style.css.map */
