@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 :root {
   box-sizing: border-box;
@@ -10,10 +11,12 @@
 
 /*** Styles for Tecya Development ***/
 .w-fit {
+  width: -moz-fit-content;
   width: fit-content;
 }
 
 .h-fit {
+  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -2845,9 +2848,12 @@ p {
 }
 
 ul.wide-link-light {
+  /* ESTILOS GENERALES PARA LA LISTA */
   list-style: none;
-  padding: 0;
+  /* Padding general para el exterior del navbar*/
+  padding: 2rem 1.5rem;
   margin: 0;
+  /* LOS ELEMENTOS DE LISTA SE CONSIDERAN COMPONENTES A PARTE, LOS MENU ITEM CONTAINER */
 }
 ul.wide-link-light > li > a, ul.wide-link-light > li > ul > li > a {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2880,6 +2886,7 @@ ul.wide-link-light > li > a > span > i, ul.wide-link-light > li > ul > li > a > 
 }
 ul.wide-link-light > li > a > div, ul.wide-link-light > li > ul > li > a > div {
   text-align: center;
+  width: -moz-fit-content;
   width: fit-content;
 }
 ul.wide-link-light > li > a > div:hover, ul.wide-link-light > li > ul > li > a > div:hover {
@@ -2896,11 +2903,15 @@ ul.wide-link-light > li > ul > li > a {
 }
 
 ul.wide-link-dark {
+  /* ESTILOS GENERALES PARA LA LISTA */
   list-style: none;
-  padding: 0;
+  /* Padding general para el exterior del navbar*/
+  padding: 2rem 1.5rem;
   margin: 0;
+  /* LOS ELEMENTOS DE LISTA SE CONSIDERAN COMPONENTES A PARTE, LOS MENU ITEM CONTAINER */
   background-color: #0F1011;
   font-weight: bold;
+  height: 100vh;
 }
 ul.wide-link-dark > li > a, ul.wide-link-dark > li > ul > li > a {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
@@ -2933,6 +2944,7 @@ ul.wide-link-dark > li > a > span > i, ul.wide-link-dark > li > ul > li > a > sp
 }
 ul.wide-link-dark > li > a > div, ul.wide-link-dark > li > ul > li > a > div {
   text-align: center;
+  width: -moz-fit-content;
   width: fit-content;
 }
 ul.wide-link-dark > li > a > div:hover, ul.wide-link-dark > li > ul > li > a > div:hover {
@@ -2987,6 +2999,9 @@ input[type=date]:focus {
   border-color: #ffcd3e;
   box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
 }
+input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=number]::-moz-placeholder, input[type=file]::-moz-placeholder, input[type=date]::-moz-placeholder {
+  color: #808182;
+}
 input[type=text]::placeholder,
 input[type=email]::placeholder,
 input[type=password]::placeholder,
@@ -3018,6 +3033,9 @@ input[type=date]::placeholder {
   border-color: #ffcd3e !important;
   box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5) !important;
 }
+.ts-control::-moz-placeholder, .ts-dropdown .ts-control input::-moz-placeholder, .ts-dropdown input .ts-control:active::-moz-placeholder, .ts-dropdown:active::-moz-placeholder {
+  color: #808182;
+}
 .ts-control::placeholder,
 .ts-dropdown .ts-control input::placeholder,
 .ts-dropdown input .ts-control:active::placeholder,
@@ -3044,6 +3062,9 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   border-color: #ffcd3e;
   box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
 }
+input[type=radio]::-moz-placeholder, input[type=checkbox]::-moz-placeholder {
+  color: #808182;
+}
 input[type=radio]::placeholder, input[type=checkbox]::placeholder {
   color: #808182;
 }
@@ -3064,6 +3085,9 @@ input[type=radio]:checked, input[type=checkbox]:checked {
 .form-select:focus {
   border-color: #ffcd3e;
   box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
+}
+.form-select::-moz-placeholder {
+  color: #808182;
 }
 .form-select::placeholder {
   color: #808182;
@@ -3182,4 +3206,78 @@ input[type=radio]:checked, input[type=checkbox]:checked {
   margin-right: 0.3rem;
   display: inline-block;
   margin-bottom: 0.5rem;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/* Sidebar  */
+/* Sidebar  */
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.fa-bars {
+  color: grey;
+} 
+/*Solo sidebar para pruebas */
+.title-nav h6 {
+  font-weight: bold;
+  text-align: center;
+  margin-top: 52px;
+  margin-bottom: 0px;
+}
+
+.title-nav {
+  display: flex;
+  position: relative;
+  padding-left: 1rem;
+  justify-content: flex-start;
+}
+
+/*seccion de marca Tecya*/
+#nosotros {
+  position: fixed;
+  bottom: 50px;
+  left: 24px;
+}
+
+.seccion-nos {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.seccion-nos img {
+  height: 1.5rem;
+}
+
+/*FIN seccion de marca Tecya*/
+/*CSS SOLO PARA LOS COLAPSABLES*/
+.collapsible ul {
+  display: none;
+  margin-top: 10px; /* Ajusta según sea necesario */
+}
+
+.collapsible.open ul {
+  display: block;
+}
+
+.collapsible .fa-chevron-down {
+  transition: transform 0.3s ease;
+}
+
+.collapsible.open .fa-chevron-down {
+  transform: rotate(180deg);
+}
+
+/* FIN CSS SOLO PARA LOS COLAPSABLES */
+/* FIN SOLO SIDEBAR PARA PRUEBAS */
+/*
+
+LISTA DE COMPONENTES PARA EL NAVBAR
+
+- 
+
+
+*//*# sourceMappingURL=style.css.map */
