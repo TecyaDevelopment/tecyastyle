@@ -10,7 +10,7 @@
   justify-content: space-between;
 }
 
-/* Sidebar  */
+/* Sidebar  */ 
 #sidebar {
   position: fixed;
   top: 0;
@@ -118,6 +118,44 @@
 }
 
 /* FIN CSS SOLO PARA LOS COLAPSABLES */
+
+
+/*Cambio de tama;o del sidebar*/
+
+
+
+
+#sidebar.collapsed {
+  width: 85px; /* Ancho del sidebar cuando está colapsado */
+}
+
+/*cosas que no quiero que aparescan cuando se hace peque;o el sidebar*/
+
+#sidebar.collapsed .title-nav h6,
+#sidebar.collapsed .nav-list-item p,
+#sidebar.collapsed .nav-list-item h5,
+#sidebar.collapsed .fa-chevron-down,
+#sidebar.collapsed #nosotros img,
+#sidebar.collapsed #nosotros small
+ {
+  display: none; /* Oculta textos, imágenes y otros elementos */
+}
+
+
+/*COSAS QUE QUIERO MOSTRAR CUANDO EL SIDEBAR ES PEQUENO*/
+/*icono pequeno q solo se utiliza en el sidebar pequeno*/
+#sidebar.collapsed .icon-small{
+  display: flex;
+}
+
+.icon-small {
+  display: none;
+}
+
+/*FIN icono pequeno q solo se utiliza en el sidebar pequeno*/
+
+
+
 
 
 

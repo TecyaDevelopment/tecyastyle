@@ -12,10 +12,12 @@
 
 /*** Styles for Tecya Development ***/
 .w-fit {
+  width: -moz-fit-content;
   width: fit-content;
 }
 
 .h-fit {
+  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -2885,6 +2887,9 @@ input[type=date]:focus {
   border-color: #ffcd3e;
   box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
 }
+input[type=text]::-moz-placeholder, input[type=email]::-moz-placeholder, input[type=password]::-moz-placeholder, input[type=number]::-moz-placeholder, input[type=file]::-moz-placeholder, input[type=date]::-moz-placeholder {
+  color: #808182;
+}
 input[type=text]::placeholder,
 input[type=email]::placeholder,
 input[type=password]::placeholder,
@@ -2916,6 +2921,9 @@ input[type=date]::placeholder {
   border-color: #ffcd3e !important;
   box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5) !important;
 }
+.ts-control::-moz-placeholder, .ts-dropdown .ts-control input::-moz-placeholder, .ts-dropdown input .ts-control:active::-moz-placeholder, .ts-dropdown:active::-moz-placeholder {
+  color: #808182;
+}
 .ts-control::placeholder,
 .ts-dropdown .ts-control input::placeholder,
 .ts-dropdown input .ts-control:active::placeholder,
@@ -2942,6 +2950,9 @@ input[type=radio]:focus, input[type=checkbox]:focus {
   border-color: #ffcd3e;
   box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
 }
+input[type=radio]::-moz-placeholder, input[type=checkbox]::-moz-placeholder {
+  color: #808182;
+}
 input[type=radio]::placeholder, input[type=checkbox]::placeholder {
   color: #808182;
 }
@@ -2962,6 +2973,9 @@ input[type=radio]:checked, input[type=checkbox]:checked {
 .form-select:focus {
   border-color: #ffcd3e;
   box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.5);
+}
+.form-select::-moz-placeholder {
+  color: #808182;
 }
 .form-select::placeholder {
   color: #808182;
@@ -3184,6 +3198,32 @@ input[type=radio]:checked, input[type=checkbox]:checked {
 }
 
 /* FIN CSS SOLO PARA LOS COLAPSABLES */
+/*Cambio de tama;o del sidebar*/
+#sidebar.collapsed {
+  width: 85px; /* Ancho del sidebar cuando está colapsado */
+}
+
+/*cosas que no quiero que aparescan cuando se hace peque;o el sidebar*/
+#sidebar.collapsed .title-nav h6,
+#sidebar.collapsed .nav-list-item p,
+#sidebar.collapsed .nav-list-item h5,
+#sidebar.collapsed .fa-chevron-down,
+#sidebar.collapsed #nosotros img,
+#sidebar.collapsed #nosotros small {
+  display: none; /* Oculta textos, imágenes y otros elementos */
+}
+
+/*COSAS QUE QUIERO MOSTRAR CUANDO EL SIDEBAR ES PEQUENO*/
+/*icono pequeno q solo se utiliza en el sidebar pequeno*/
+#sidebar.collapsed .icon-small {
+  display: flex;
+}
+
+.icon-small {
+  display: none;
+}
+
+/*FIN icono pequeno q solo se utiliza en el sidebar pequeno*/
 /* FIN SOLO SIDEBAR PARA PRUEBAS */
 /*
 

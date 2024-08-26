@@ -22,7 +22,7 @@
   <!---Comienza el Sidebar---->
     <div id="sidebar" class="w-fit">
       <section id="main-sidebar">
-        <div id="toggle-btn">
+        <div id="toggle-btn" class="togle-btn">
             <i class="fa fa-bars text-gray-300 fs-3xl" aria-hidden="true"></i>
         </div>
         <ul class="my-nav-list">
@@ -38,18 +38,22 @@
               </a>
             </li>
           </div>
+
+
           <hr class="divider border">
+
+
           <li id="empresas-section" class="collapsible">
             <a href="#" id="empresas-toggle" class="nav-list-item nav-list-toggler">
               <span>
                 <i class="fas fa-briefcase"></i>
-                Empresas
+                <h5>Empresas</h5>
               </span>
               <div>
                 <i id="empresas-icon" class="fas fa-chevron-down"></i>
               </div>
             </a>
-            <ul id="empresas-list" class="inner-sidebar">
+            <ul id="empresas-list" /*class="inner-sidebar"*/>
               <li>
                 <a href="#" class="nav-list-item">
                   <span>
@@ -88,7 +92,7 @@
             <a href="#" class="nav-list-item nav-list-toggler">
               <span>
                 <i class="fas fa-users"></i>
-                Contratos
+                <h5>Contratos</h5>
               </span>
             </a>
           </li>
@@ -96,7 +100,7 @@
             <a href="#" class="nav-list-item nav-list-toggler">
               <span>
                 <i class="fas fa-file-alt"></i>
-                Liquidaciones
+              <h5>Liquidaciones</h5>
               </span>
             </a>
           </li>
@@ -104,7 +108,7 @@
             <a href="#" class="nav-list-item nav-list-toggler">
               <span>
                 <i class="fas fa-dollar-sign"></i>
-                Remuneraciones
+              <h5>Remuneraciones</h5>
               </span>
             </a>
           </li>
@@ -112,7 +116,7 @@
               <a href="#" id="indicadores-toggle" class="nav-list-item nav-list-toggler">
                 <span>
                   <i class="fas fa-bar-chart"></i>
-                  Indicadores
+                  <h5>Indicadores</h5>
                 </span>
                 <div><i id="indicadores-icon"  class="fas fa-chevron-down"></i></div>
               </a>
@@ -136,6 +140,10 @@
         <small class="text-gray-100 fs-xs">Soporte</small>
       </div>
 
+      <div class="icon-small">
+        <img src="Capa_1.png"></img>
+      </div>
+
     </div>
 
 
@@ -143,30 +151,38 @@
     <!-- Scripts -->
     <script>
 
-    //evento de colapsar las secciones
     document.addEventListener('DOMContentLoaded', function() {
-      // Colapsable de Empresas
-      const empresasToggleButton = document.getElementById('empresas-toggle');
-      const empresasCollapsibleSection = document.getElementById('empresas-section');
-      const empresasChevronIcon = document.getElementById('empresas-icon');
+      const sidebar = document.getElementById('sidebar');
+      const toggleButton = document.getElementById('toggle-btn');
 
-      empresasToggleButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        empresasCollapsibleSection.classList.toggle('open');
+      // Función para alternar la clase 'collapsed' en el sidebar
+      toggleButton.addEventListener('click', function() {
+        sidebar.classList.toggle('collapsed');
       });
 
-      // Colapsable de Indicadores
-      const indicadoresToggleButton = document.getElementById('indicadores-toggle');
-      const indicadoresCollapsibleSection = document.getElementById('indicadores-section');
-      const indicadoresChevronIcon = document.getElementById('indicadores-icon');
+      // Colapsables de Empresas y de Indicadores
+      const collapsibleSections = [
+        {
+          toggleButton: document.getElementById('empresas-toggle'),
+          section: document.getElementById('empresas-section')
+        },
+        {
+          toggleButton: document.getElementById('indicadores-toggle'),
+          section: document.getElementById('indicadores-section')
+        }
+      ];
 
-      indicadoresToggleButton.addEventListener('click', function(event) {
-        event.preventDefault();
-        indicadoresCollapsibleSection.classList.toggle('open');
+      // Añadir event listeners para cada colapsable
+      collapsibleSections.forEach(function(collapsible) {
+        collapsible.toggleButton.addEventListener('click', function(event) {
+          event.preventDefault();
+          collapsible.section.classList.toggle('open');
+        });
       });
     });
 
-    </script>
+  
+      </script>
     
 
 
