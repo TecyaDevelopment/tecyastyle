@@ -3,14 +3,14 @@
 @mixin my-nav-item(){
   width: 100%;
   padding: map-get($sizes, 3) map-get($sizes, 2);
-  transition: all .15s ease-in-out;
+  // transition: all .15s ease-in-out;
   display: flex;
   flex-direction: row;
   font-size: map-get($sizes, 4);
   justify-content: space-between;
 }
 
-/* Sidebar  */
+/* Sidebar  */ 
 #sidebar {
   position: fixed;
   top: 0;
@@ -29,12 +29,6 @@
   gap: map-get($sizes, 9);
   hr {
     margin: 0;
-  }
-
-  .inner-sidebar {
-    display: flex;
-    flex-direction: column;
-    gap: map-get($sizes, 2);
   }
 
 }
@@ -62,8 +56,19 @@
   @include my-nav-item();
   span {
     display: flex;
-    align-items: center;
-    gap: map-get($sizes, 4);
+    flex-direction: row;
+    h5 {
+      margin: 0 auto;
+    }    
+    .menu-icon-flex{
+      width: map-get($sizes, 5);
+      height: map-get($sizes, 5);
+      margin-right: map-get($sizes, 4);
+      i {
+        display: inline-block;
+        margin: auto;
+      }
+    }
   }
   text-decoration: none;
   color: map-get($grayscale, 300);
@@ -118,6 +123,69 @@
 }
 
 /* FIN CSS SOLO PARA LOS COLAPSABLES */
+
+
+
+
+
+
+
+/*cosas que no quiero que aparezcan cuando se hace peque;o el sidebar*/
+
+#sidebar.collapsed .title-nav h6,
+#sidebar.collapsed .nav-list-item p,
+#sidebar.collapsed .nav-list-item h5,
+#sidebar.collapsed .fa-chevron-down,
+#sidebar.collapsed #nosotros img,
+#sidebar.collapsed #nosotros small,
+#sidebar.collapsed #empresas-list,
+#sidebar.collapsed #indicadores-list
+ {
+  display: none; /* Oculta textos, imágenes y otros elementos */
+}
+
+
+// #sidebar.collapsed span i{
+// }
+
+//Todo lo q va en el sidebar colapsado
+
+#sidebar.collapsed {
+  width: 85px; /* Ancho del sidebar cuando está colapsado */
+  align-items: center;
+  .nav-list-item {
+    width: map-get($sizes,9);
+    height: map-get($sizes,9);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+  span {
+    .menu-icon-flex {
+      width: 100%;
+      margin: 0;
+      align-items: center;
+      i {
+        margin: 0 auto;
+      }
+
+    }
+    
+  }
+  .icon-small{
+    display: flex;
+  }
+}
+
+
+.icon-small {
+  display: none;
+}
+
+/*FIN icono pequeno q solo se utiliza en el sidebar pequeno*/
+
+
+
 
 
 
