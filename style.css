@@ -3117,11 +3117,6 @@ input[type=radio]:checked, input[type=checkbox]:checked {
 #main-sidebar hr {
   margin: 0;
 }
-#main-sidebar .inner-sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
 
 #toggle-btn {
   width: 100%;
@@ -3144,7 +3139,6 @@ input[type=radio]:checked, input[type=checkbox]:checked {
 .nav-list-item {
   width: 100%;
   padding: 0.75rem 0.5rem;
-  transition: all 0.15s ease-in-out;
   display: flex;
   flex-direction: row;
   font-size: 1rem;
@@ -3154,8 +3148,19 @@ input[type=radio]:checked, input[type=checkbox]:checked {
 }
 .nav-list-item span {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  flex-direction: row;
+}
+.nav-list-item span h5 {
+  margin: 0 auto;
+}
+.nav-list-item span .menu-icon-flex {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+.nav-list-item span .menu-icon-flex i {
+  display: inline-block;
+  margin: auto;
 }
 .nav-list-item:hover {
   color: #F1F1F2;
@@ -3224,6 +3229,46 @@ input[type=radio]:checked, input[type=checkbox]:checked {
 }
 
 /*FIN icono pequeno q solo se utiliza en el sidebar pequeno*/
+/*cosas que no quiero que aparezcan cuando se hace peque;o el sidebar*/
+#sidebar.collapsed .title-nav h6,
+#sidebar.collapsed .nav-list-item p,
+#sidebar.collapsed .nav-list-item h5,
+#sidebar.collapsed .fa-chevron-down,
+#sidebar.collapsed #nosotros img,
+#sidebar.collapsed #nosotros small,
+#sidebar.collapsed #empresas-list,
+#sidebar.collapsed #indicadores-list {
+  display: none; /* Oculta textos, imágenes y otros elementos */
+}
+
+#sidebar.collapsed {
+  width: 85px; /* Ancho del sidebar cuando está colapsado */
+  align-items: center;
+}
+#sidebar.collapsed .nav-list-item {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+#sidebar.collapsed span .menu-icon-flex {
+  width: 100%;
+  margin: 0;
+  align-items: center;
+}
+#sidebar.collapsed span .menu-icon-flex i {
+  margin: 0 auto;
+}
+#sidebar.collapsed .icon-small {
+  display: flex;
+}
+
+.icon-small {
+  display: none;
+}
+
+/*FIN icono pequeno q solo se utiliza en el sidebar pequeno*/
 /* FIN SOLO SIDEBAR PARA PRUEBAS */
 /*
 
@@ -3237,4 +3282,52 @@ LISTA DE COMPONENTES PARA EL NAVBAR
 
 - icon + item (auto layouteable) div > img
 
-*//*# sourceMappingURL=style.css.map */
+*/
+.div-dos {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.seccion-amarilla {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #FFC107;
+  width: 100%;
+  height: 100%;
+}
+
+.seccion-mukup {
+  background-color: #353535;
+  background-image: url(/frame.png);
+  background-repeat: no-repeat;
+  background-size: fill;
+  width: 100%;
+  height: 100%;
+}
+
+.marca {
+  width: 40%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+h2 {
+  margin-bottom: 2.5rem;
+}
+
+.row-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-center > * {
+  margin: -8px 0; /* Ajusta el valor según sea necesario */
+}/*# sourceMappingURL=style.css.map */
