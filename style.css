@@ -3285,7 +3285,7 @@ LISTA DE COMPONENTES PARA EL NAVBAR
 */
 .div-dos {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -3297,14 +3297,14 @@ LISTA DE COMPONENTES PARA EL NAVBAR
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: #FFC107;
+  background-color: #D5D5D6;
   width: 100%;
   height: 100%;
 }
 
 .seccion-mukup {
   background-color: #353535;
-  background-image: url(/frame.png);
+  background-image: asset-url("frame.png");
   background-repeat: no-repeat;
   background-size: fill;
   width: 100%;
@@ -3313,8 +3313,6 @@ LISTA DE COMPONENTES PARA EL NAVBAR
 
 .marca {
   width: 40%;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 
 h2 {
@@ -3329,5 +3327,9 @@ h2 {
 }
 
 .row-center > * {
-  margin: -8px 0; /* Ajusta el valor según sea necesario */
+  margin: -8px 0;
+}
+
+.s-d {
+  margin-top: 1.2%;
 }/*# sourceMappingURL=style.css.map */
