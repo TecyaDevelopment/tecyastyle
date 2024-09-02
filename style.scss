@@ -30,5 +30,10 @@
 @import 'components/links';
 @import 'components/inputs';
 @import 'components/badges';
-@import 'components/sidebar';
-@import 'components/login';
+
+
+/****************************/
+/* VIEWS FOR ECONTABLE */
+
+@import 'views/econtable/sidebar';
+@import 'views/econtable/login';
