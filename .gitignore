@@ -1,3 +1,12 @@
-/test-folder
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/tmp/
+
+/vendor/stylesheets/tecyastyles/test-folder
 style.css
 style.css.map
