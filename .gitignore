@@ -7,6 +7,6 @@
 /spec/reports/
 /tmp/
 
-/vendor/stylesheets/tecyastyles/test-folder
+vendor/assets/stylesheets/tecyastyles/styleguide/test-folder-dos
 style.css
 style.css.map

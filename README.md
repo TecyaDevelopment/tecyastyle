@@ -19,3 +19,9 @@ tecya-styles/style.css
 ```
 
 **Esperar cambios fuertes en la estructura de este proyecto.**
+
+# Cambios recientes 📫
+
+- 5 clases nuevas para manejar opacidad
+- Componente de tooltips creado
+- Estado de DANGER 🔴 para los formularios
