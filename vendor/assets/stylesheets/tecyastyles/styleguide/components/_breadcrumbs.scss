@@ -1,0 +1,3 @@
+.breadcrumb-link{
+  @include master-link-creator(map-get($grayscale, 600), map-get($primary, 500));
+}
