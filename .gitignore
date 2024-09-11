@@ -6,6 +6,8 @@
 /pkg/
 /spec/reports/
 /tmp/
+vendor/assets/stylesheets/tecyastyles/styleguide/view
 
 style.css
 style.css.map
+
