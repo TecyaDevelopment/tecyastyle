@@ -1,4 +1,4 @@
-@mixin picture-sizes {
+@mixin picture-sizes-generator {
   @each $key, $value in $sizes {
     .pic-w-#{$key} {
       width: $value;
@@ -7,4 +7,4 @@
   }
 }
 
-@include picture-sizes;
+@include picture-sizes-generator;
