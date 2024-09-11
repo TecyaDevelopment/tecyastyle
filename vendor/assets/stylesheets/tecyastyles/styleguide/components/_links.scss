@@ -5,11 +5,14 @@ $link-colors: primary, secondary;
 @mixin master-link-creator($normal, $hover){
   color: $normal !important;
   text-decoration: none;
-  font-weight: map-get($font-weights, medium);
+  font-weight: map-get($font-weights, regular);
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 
-  > i {
-    margin-right: map-get($sizes, 2) !important;
+  > i:first-child {
+    margin-right: map-get($sizes, 3) !important;
+  }
+  > i:last-child {
+    margin-left: map-get($sizes, 3) !important;
   }
 
   &:hover{
@@ -95,11 +98,18 @@ $link-colors: primary, secondary;
 // Common links
 
 .link-primary{
+  font-weight: map-get($font-weights, medium) !important;
   @include master-link-creator(map-get($primary, 700), map-get($primary, 500));
 }
 
 .link-secondary{
+  font-weight: map-get($font-weights, medium) !important;
   @include master-link-creator(map-get($secondary, 700), map-get($secondary, 500));
+}
+
+.link-subtle{
+  font-weight: map-get($font-weights, regular) !important;
+  @include master-link-creator(map-get($grayscale, 900), map-get($primary, 500));
 }
 
 // Wide links
