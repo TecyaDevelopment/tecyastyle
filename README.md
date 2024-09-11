@@ -25,3 +25,4 @@ tecya-styles/style.css
 - 5 clases nuevas para manejar opacidad
 - Componente de tooltips creado
 - Estado de DANGER 🔴 para los formularios
+- Strength meter aniadido desde dannyimplementa
