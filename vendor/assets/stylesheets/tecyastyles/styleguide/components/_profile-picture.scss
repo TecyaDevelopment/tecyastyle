@@ -10,10 +10,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: $size * 0.5;
+  font-size: $size * 0.45;
   font-weight: map-get($font-weights, bold);
-  text-transform: uppercase;
-  line-height: 1;
+  text-transform: capitalize;
+  line-height: 0;
   user-select: none;
 }
 
@@ -24,5 +24,5 @@
 
 // Para el usuario
 .pfp-user{
-  @include general-pfp(8, map-get($secondary, 500), map-get($grayscale, 100));
+  @include general-pfp(8, map-get($grayscale, 900), map-get($grayscale, 100));
 }
