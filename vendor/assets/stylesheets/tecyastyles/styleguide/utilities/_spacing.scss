@@ -3,3 +3,6 @@
 
 // Margin generator
 @include spacing-generator($sizes, 'margin');
+
+// Gap generator
+@include gap-generator($sizes);

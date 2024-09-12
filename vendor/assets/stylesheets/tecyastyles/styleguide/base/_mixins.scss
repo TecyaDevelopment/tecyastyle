@@ -57,6 +57,14 @@
   }
 }
 
+@mixin gap-generator($map){
+  @each $key, $value in $map {
+    .gap-#{$key}{
+      gap: $value;
+    }
+  }
+}
+
 // COLORING
 
 @mixin color-generator($map, $name) {
