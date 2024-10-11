@@ -112,4 +112,9 @@ $link-colors: primary, secondary;
   @include master-link-creator(map-get($grayscale, 900), map-get($primary, 500));
 }
 
+.link-subtle-dark{
+  font-weight: map-get($font-weights, regular) !important;
+  @include master-link-creator(map-get($grayscale, 100), map-get($primary, 500));
+}
+
 // Wide links
