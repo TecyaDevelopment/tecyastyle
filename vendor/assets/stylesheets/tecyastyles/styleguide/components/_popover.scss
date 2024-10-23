@@ -18,12 +18,12 @@
 
 .bs-popover-start > .popover-arrow::after, .bs-popover-auto[data-popper-placement^="left"] > .popover-arrow::after {
   // right: 1px;
-  border-width: 0.5rem 0 0.5rem 0.5rem;
+  border-width: 0.5em 0 0.5em 0.5em;
   border-left-color: map-get($grayscale, 900);
 }
 
 .bs-popover-end > .popover-arrow::after, .bs-popover-auto[data-popper-placement^="right"] > .popover-arrow::after {
   left: 1px;
-  border-width: 0.5rem 0.5rem 0.5rem 0;
+  border-width: 0.5em 0.5em 0.5em 0;
   border-right-color: map-get($grayscale, 900);
 }
