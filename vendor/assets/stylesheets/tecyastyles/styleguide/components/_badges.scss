@@ -9,12 +9,12 @@
       background-color: map-get($color_value, 400);
       text-transform: uppercase;
       color: white;
-      padding: 0.1rem map-get($sizes, 2);
+      padding: 0.1em map-get($sizes, 2);
 
       & + .badge-#{$color_key}{
-        margin-right: .3rem;
+        margin-right: .3em;
         display: inline-block;
-        margin-bottom: .5rem;
+        margin-bottom: .5em;
       }
     }
   }

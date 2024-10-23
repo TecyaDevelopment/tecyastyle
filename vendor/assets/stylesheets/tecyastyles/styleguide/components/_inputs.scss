@@ -9,7 +9,7 @@
   }
   &:focus{
     border-color: rgba(map-get($primary, 400), 1);
-    box-shadow: 0 0 0 .25rem rgba(map-get($primary, 500), .5);
+    box-shadow: 0 0 0 .25em rgba(map-get($primary, 500), .5);
   }
 
   // Psudoelementos
@@ -39,7 +39,7 @@
   }
   &:focus{
     border-color: rgba(map-get($primary, 400), 1) !important;
-    box-shadow: 0 0 0 .25rem rgba(map-get($primary, 500), .5) !important;
+    box-shadow: 0 0 0 .25em rgba(map-get($primary, 500), .5) !important;
   }
 
   // Psudoelementos
@@ -126,7 +126,7 @@ input[type="radio"], input[type="checkbox"] {
   
   i {
     position: absolute;
-    left: 1rem;
+    left: 1em;
     top: 30%;
     transform: translateY(-50%);
     color: map-get($grayscale, 700);
@@ -134,7 +134,7 @@ input[type="radio"], input[type="checkbox"] {
     font-size: map-get($sizes, 4);
   }
   input {
-    padding-left: 2.7rem;
+    padding-left: 2.7em;
   }
 }
 
@@ -150,19 +150,19 @@ input[type="radio"], input[type="checkbox"] {
     pointer-events: none;
 
     &.first-icon {
-      left: 1rem;
+      left: 1em;
     }
 
     &.last-icon {
-      right: 1rem;
+      right: 1em;
       pointer-events: auto;
       cursor: pointer;
     }
   }
 
   input {
-    padding-right: 2.7rem;
-    padding-left: 2.7rem;
+    padding-right: 2.7em;
+    padding-left: 2.7em;
   }
 }
 
@@ -171,5 +171,5 @@ input[type="radio"], input[type="checkbox"] {
 /******************************/
 .warning-input {
   border-color: rgba(map-get($danger, 500), 1) !important;
-  box-shadow: 0 0 0 .25rem rgba(map-get($danger, 400), .9) !important;
+  box-shadow: 0 0 0 .25em rgba(map-get($danger, 400), .9) !important;
 }

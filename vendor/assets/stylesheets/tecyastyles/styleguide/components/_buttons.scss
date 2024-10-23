@@ -29,7 +29,7 @@
     background-color: $bg !important;
     border: 1px solid $border !important;
     color: $text !important;
-    box-shadow: 0 0 0 .25rem rgba(map-get($primary, 500), .5);
+    box-shadow: 0 0 0 .25em rgba(map-get($primary, 500), .5);
   }
   &:active{
     background-color: $bg-active !important;
