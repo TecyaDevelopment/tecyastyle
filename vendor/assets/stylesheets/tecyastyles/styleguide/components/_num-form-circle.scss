@@ -1,3 +1,5 @@
+.num-form {
+
 .nav-link { 
     margin-bottom: 31px;
     display: block;
@@ -17,6 +19,9 @@
     border: 1px solid map-get($primary, 500);
     background-color: map-get($primary, 500);
 }
+
+
+
 
 /* Añadimos un pseudo-elemento a cada botón de la navegación */
 .nav-pills .nav-link::after {
@@ -49,4 +54,6 @@
 .nav-link:hover {
     border: 1px solid map-get($primary, 500);
     color: map-get($primary, 500);
+}
+
 }
