@@ -14,76 +14,259 @@
   
   <body>
     
-
-
-
     <div class="container mt-5">
+
       <!-- Tabs de Contratos -->
-      <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" href="#">Contratos vigentes (3)</a>
+      <ul class="nav nav-pills mb-3" id="contractsTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="vigentes-tab" data-bs-toggle="tab" data-bs-target="#vigentes" type="button" role="tab" aria-controls="vigentes" aria-selected="true">
+            Contratos vigentes (3)
+          </button>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Contratos finalizados (9)</a>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="finalizados-tab" data-bs-toggle="tab" data-bs-target="#finalizados" type="button" role="tab" aria-controls="finalizados" aria-selected="false">
+            Contratos finalizados (9)
+          </button>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Borradores (1)</a>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="borradores-tab" data-bs-toggle="tab" data-bs-target="#borradores" type="button" role="tab" aria-controls="borradores" aria-selected="false">
+            Borradores (1)
+          </button>
         </li>
       </ul>
-    
-      <!-- Alerta de advertencia -->
-      <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
-        <strong>¡Atención!</strong> No tienes ninguna empresa asociada. Contacta con tu <strong>administrador</strong> o con soporte.
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-    
-      <!-- Tabla de Contratos -->
-      <div class="card table-responsive">
-        <table class="table table-hover table-borderless mb-0">
-          <thead class="table-warning">
-            <tr>
-              <th>Rut</th>
-              <th>Nombre</th>
-              <th>Fecha inicio</th>
-              <th>Fecha término</th>
-              <th>Anexos</th>
-              <th></th> <!-- Columna para los tres puntos de opciones -->
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>12.147.852-9</td>
-              <td>Filomeno<br><span class="text-muted">Contrato indefinido</span></td>
-              <td>02/05/2020</td>
-              <td>INDEFINIDO</td>
-              <td>NO PRESENTA</td>
-              <td class="text-right"><button class="btn btn-link text-dark">&#8942;</button></td>
-            </tr>
-            <tr>
-              <td>21.336.474-6</td>
-              <td><a href="#" class="text-warning font-weight-bold">Ana Banana &#128279;</a><br><span class="text-muted">Part Time Plazo Fijo</span></td>
-              <td>01/01/2023</td>
-              <td>28/02/2025</td>
-              <td>2 ANEXOS &#128279;</td>
-              <td class="text-right"><button class="btn btn-link text-dark">&#8942;</button></td>
-            </tr>
-            <tr>
-              <td>13.447.968-9</td>
-              <td><a href="#" class="text-warning font-weight-bold">Kate Bush &#128279;</a><br><span class="text-muted">Part Time Indefinido</span></td>
-              <td>02/05/2020</td>
-              <td>INDEFINIDO</td>
-              <td>1 ANEXO &#128279;</td>
-              <td class="text-right"><button class="btn btn-link text-dark">&#8942;</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    
 
-    </div>
+      <!-- Alerta de advertencia 
+        <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+          <strong>¡Atención!</strong> No tienes ninguna empresa asociada. Contacta con tu <strong>administrador</strong> o con soporte.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+
     
+      <!-- Contenido de cada Tab -->
+      <div class="tab-content mt-4 " id="contractsTabContent">
+        <!-- Tabla de Contratos Vigentes -->
+        <div class="tab-pane fade show active" id="vigentes" role="tabpanel" aria-labelledby="vigentes-tab">
+          <div class="card table-responsive">
+            <table class="table table-hover table-borderless mb-0">
+              <thead class="table-warning">
+                <tr>
+                  <th>Rut</th>
+                  <th>Nombre</th>
+                  <th>Fecha inicio</th>
+                  <th>Fecha término</th>
+                  <th>Anexos</th>
+                  <th></th> <!-- Columna para los tres puntos de opciones -->
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>12.147.852-9</td>
+                  <td>
+                    <a href="#" class="text-warning font-weight-bold">Filomeno &#128279;</a><br>
+                    <span class="text-gray-500 fx-base">Contrato indefinido</span>
+                  </td>
+                  <td>02/05/2020</td>
+                  <td>INDEFINIDO</td>
+                  <td>NO PRESENTA</td>
+                  <td class="text-right">
+                    <button class="btn btn-link text-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#8942;</button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Editar contrato</a>
+                      <a class="dropdown-item" href="#">Nuevo anexo</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>21.336.474-6</td>
+                  <td>
+                    <a href="#" class="text-warning font-weight-bold">Ana Banana &#128279;</a><br>
+                    <span class="text-gray-500 fx-base">Part Time Plaza Fijo</span>
+                  </td>
+                  <td>01/01/2023</td>
+                  <td>28/02/2025</td>
+                  <td>2 ANEXOS &#128279;</td>
+                  <td class="text-right">
+                    <button class="btn btn-link text-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#8942;</button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Editar contrato</a>
+                      <a class="dropdown-item" href="#">Nuevo anexo</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>13.447.968-9</td>
+                  <td>
+                    <a href="#" class="text-warning font-weight-bold">Kate Bush &#128279;</a><br>
+                    <span class="text-gray-500 fx-base">Part Time Indefinido</span>
+                  </td>
+                  <td>02/05/2020</td>
+                  <td>INDEFINIDO</td>
+                  <td>1 ANEXO &#128279;</td>
+                  <td class="text-right">
+                    <button class="btn btn-link text-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#8942;</button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Editar contrato</a>
+                      <a class="dropdown-item" href="#">Nuevo anexo</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+    
+        <!-- Tabla de Contratos Finalizados -->
+        <div class="tab-pane fade" id="finalizados" role="tabpanel" aria-labelledby="finalizados-tab">
+          <div class="card table-responsive">
+            <table class="table table-hover table-borderless mb-0">
+              <thead class="table-warning">
+                <tr>
+                  <th>Rut</th>
+                  <th>Nombre</th>
+                  <th>Fecha inicio</th>
+                  <th>Fecha término</th>
+                  <th>Anexos</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Contenido de la tabla de contratos finalizados -->
+                <tr>
+                  <td>12.147.852-9</td>
+                  <td>
+                    <a href="#" class="text-warning font-weight-bold">Filomeno &#128279;</a><br>
+                    <span class="text-gray-500 fx-base">Contrato indefinido</span>
+                  </td>
+                  <td>02/05/2020</td>
+                  <td>INDEFINIDO</td>
+                  <td>NO PRESENTA</td>
+                  <td class="text-right">
+                    <button class="btn btn-link text-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#8942;</button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Editar contrato</a>
+                      <a class="dropdown-item" href="#">Nuevo anexo</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>21.336.474-6</td>
+                  <td>
+                    <a href="#" class="text-warning font-weight-bold">Ana Banana &#128279;</a><br>
+                    <span class="text-gray-500 fx-base">Part Time Plaza Fijo</span>
+                  </td>
+                  <td>01/01/2023</td>
+                  <td>28/02/2025</td>
+                  <td>2 ANEXOS &#128279;</td>
+                  <td class="text-right">
+                    <button class="btn btn-link text-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#8942;</button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Editar contrato</a>
+                      <a class="dropdown-item" href="#">Nuevo anexo</a>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td>13.447.968-9</td>
+                  <td>
+                    <a href="#" class="text-warning font-weight-bold">Kate Bush &#128279;</a><br>
+                    <span class="text-gray-500 fx-base">Part Time Indefinido</span>
+                  </td>
+                  <td>02/05/2020</td>
+                  <td>INDEFINIDO</td>
+                  <td>1 ANEXO &#128279;</td>
+                  <td class="text-right">
+                    <button class="btn btn-link text-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#8942;</button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Editar contrato</a>
+                      <a class="dropdown-item" href="#">Nuevo anexo</a>
+                    </div>
+                  </td>
+                </tr>              
+              </tbody>
+            </table>
+          </div>
+        </div>
+    
+        <!-- Tabla de Borradores -->
+        <div class="tab-pane fade" id="borradores" role="tabpanel" aria-labelledby="borradores-tab">
+          <div class="card table-responsive">
+            <table class="table table-hover table-borderless mb-0">
+              <thead class="table-warning">
+                <tr>
+                  <th>Rut</th>
+                  <th>Nombre</th>
+                  <th>Fecha inicio</th>
+                  <th>Fecha termino</th>
+                  <th>Estado</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <!-- Rut -->
+                  <td>12.147.852-9</td>
+                  
+                  <!-- Nombre con enlace y subtítulo -->
+                  <td>
+                    <a href="#" class="text-warning font-weight-bold">Filomeno &#128279;</a><br>
+                    <span class="text-gray-500 fx-base">INDEFINIDO</span>
+                  </td>
+                  
+                  <!-- Fecha de inicio -->
+                  <td>02/05/2020</td>
+                  
+                  <!-- Fecha de término -->
+                  <td><p  class="text-gray-500 fx-base">INDEFINIDO</p></td>
+                  
+                  <!-- Estado con chips de colores -->
+                  <td>
+                    <span class="badge rounded-pill bg-danger text-light px-3 py-2">04 / 11</span>
+                    <span class="badge rounded-pill bg-warning text-dark px-3 py-2">08 / 11</span>
+                    <span class="badge rounded-pill bg-success text-light px-3 py-2">11 / 11</span>
+                  </td>
+                  
+                  <!-- Opciones de tres puntos -->
+                  <td class="text-right">
+                    <button class="btn btn-link text-dark" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">&#8942;</button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                      <a class="dropdown-item" href="#">Continuar contrato</a>
+                      <a class="dropdown-item" href="#">Descartar borrador</a>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Paginación -->
+      <div class="d-flex justify-content-between align-items-center mt-4">
+        <span class="text-gray-500 fx-base">Contratos totales: 13</span>
+        <nav aria-label="Page navigation">
+          <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+      
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
