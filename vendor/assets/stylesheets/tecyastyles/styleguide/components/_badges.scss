@@ -20,6 +20,26 @@
   }
 }
 
+@mixin master-badges-creator-light($colors){
+  @each $color_key, $color_value in $colors{
+    .badge-#{$color_key}-light{
+      font-weight: map-get($font-weights, medium);
+      border-radius: 5px;
+      border: 1px solid map-get($color_value, 300);
+      background-color: map-get($color_value, 200);
+      text-transform: uppercase;
+      color: white;
+      padding: 0.1em map-get($sizes, 2);
+
+      & + .badge-#{$color_key}-light{
+        margin-right: .3em;
+        display: inline-block;
+        margin-bottom: .5em;
+      }
+    }
+  }
+}
+
 // DATA
 
 $colors: (
@@ -27,9 +47,12 @@ $colors: (
   'success': $success,
   'info': $info,
   'warning': $warning,
-  'danger': $danger
+  'danger': $danger,
+  'grayscale': $grayscale
 );
 
 // RULES
 
 @include master-badges-creator($colors);
+@include master-badges-creator-light($colors);
+
