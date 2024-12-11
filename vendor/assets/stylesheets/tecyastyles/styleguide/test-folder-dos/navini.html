@@ -10,56 +10,57 @@
 
     </head>
   
-    <body>
+    <body style="background-color: #D5D5D6;">
 
 
 
       <br><br>
-        <div class=" nav-liquidaciones m-5">
+        <div class="nav-liquidaciones">
+          <div class="container border rounded py-4 window-white">
+            <div class="container px-4">
+              <ul class="nav  nav-fill rounded " id="myTab" role="tablist">
+                <li class="nav-item b-end" role="presentation">
+                  <button class="nav-link active h-100 rounded-start" id="dias-y-horas-laborales" data-bs-toggle="tab" data-bs-target="#dias-y-horas-laborales-pane" type="button" role="tab" aria-controls="dias-y-horas-laborales-pane" aria-selected="true">
+                    <span>1</span>
+                    <p class="ms-2 mb-0">Días y Horas Laborales</p>
+                  </button>
+                </li>
+                <li class="nav-item b-end" role="presentation">
+                  <button class="nav-link h-100" id="haberes" data-bs-toggle="tab" data-bs-target="#haberes-pane" type="button" role="tab" aria-controls="haberes-pane" aria-selected="false">
+                    <span>2</span>
+                    <p class="ms-2 mb-0">Haberes</p>
+                  
+                  </button>
+                </li>
+                <li class="nav-item b-end" role="presentation">
+                  <button class="nav-link h-100" id="descuento" data-bs-toggle="tab" data-bs-target="#descuento-pane" type="button" role="tab" aria-controls="descuento-pane" aria-selected="false">
+                    <span>3</span>
+                    <p class="ms-2 mb-0">Descuentos</p>
+                  </button>
+                </li>
+                <li class="nav-item b-end" role="presentation">
+                  <button class="nav-link h-100" id="aportes" data-bs-toggle="tab" data-bs-target="#aportes-pane" type="button" role="tab" aria-controls="4-pane" aria-selected="false">
+                    <span>4</span>
+                    <p class="ms-2 mb-0">Aportes</p>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link h-100 rounded-end" id="totales" data-bs-toggle="tab" data-bs-target="#totales-pane" type="button" role="tab" aria-controls="totales-pane" aria-selected="false">
+                    <span>5</span>
+                    <p class="ms-2 mb-0">Totales</p>
+                  </button>
+                </li>
 
-          <ul class="nav  nav-fill rounded " id="myTab" role="tablist">
-            <li class="nav-item b-end" role="presentation">
-              <button class="nav-link active h-100 rounded-start" id="dias-y-horas-laborales" data-bs-toggle="tab" data-bs-target="#dias-y-horas-laborales-pane" type="button" role="tab" aria-controls="dias-y-horas-laborales-pane" aria-selected="true">
-                <span>1</span>
-                <p class="ms-2 mb-0">Días y Horas Laborales</p>
-              </button>
-            </li>
-            <li class="nav-item b-end" role="presentation">
-              <button class="nav-link h-100" id="haberes" data-bs-toggle="tab" data-bs-target="#haberes-pane" type="button" role="tab" aria-controls="haberes-pane" aria-selected="false">
-                <span>2</span>
-                <p class="ms-2 mb-0">Haberes</p>
-              
-              </button>
-            </li>
-            <li class="nav-item b-end" role="presentation">
-              <button class="nav-link h-100" id="descuento" data-bs-toggle="tab" data-bs-target="#descuento-pane" type="button" role="tab" aria-controls="descuento-pane" aria-selected="false">
-                <span>3</span>
-                <p class="ms-2 mb-0">Descuentos</p>
-              </button>
-            </li>
-            <li class="nav-item b-end" role="presentation">
-              <button class="nav-link h-100" id="aportes" data-bs-toggle="tab" data-bs-target="#aportes-pane" type="button" role="tab" aria-controls="4-pane" aria-selected="false">
-                <span>4</span>
-                <p class="ms-2 mb-0">Aportes</p>
-              </button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link h-100 rounded-end" id="totales" data-bs-toggle="tab" data-bs-target="#totales-pane" type="button" role="tab" aria-controls="totales-pane" aria-selected="false">
-                <span>5</span>
-                <p class="ms-2 mb-0">Totales</p>
-              </button>
-            </li>
-
-          </ul>
-
-
-            <br><br><br>
+              </ul>
+            </div>
+          </div>
+            
 
 
 
 
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="dias-y-horas-laborales-pane" role="tabpanel" aria-labelledby="dias-y-horas-laborales" tabindex="0">Días y horas Laborales</div>
+          <div class="tab-content border container mt-4 pe-0" id="myTabContent">
+            <div class="tab-pane fade show active" id="dias-y-horas-laborales-pane" role="tabpanel" aria-labelledby="dias-y-horas-laborales" tabindex="0">días y Horas Laborales</div>
             <div class="tab-pane fade" id="haberes-pane" role="tabpanel" aria-labelledby="haberes" tabindex="0">Haberes</div>
             <div class="tab-pane fade" id="descuento-pane" role="tabpanel" aria-labelledby="descuentos" tabindex="0">Descuentos</div>
             <div class="tab-pane fade" id="aportes-pane" role="tabpanel" aria-labelledby="aportes" tabindex="0">Aportes</div>
