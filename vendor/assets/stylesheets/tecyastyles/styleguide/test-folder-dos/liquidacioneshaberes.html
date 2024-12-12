@@ -34,7 +34,7 @@
                   </div>
                   <!--Fin Alerta-->  
 
-                  <!--2.1 Primera parte del formulario -->
+                  <!--2.1 Haberes -->
                   <div class="tab-pane fade show active" id="v-pills-1" role="tabpanel" aria-labelledby="v-pills-1-tab" tabindex="0">
                     
                     <div>
@@ -372,16 +372,253 @@
                   <!--2.1 FIN Primera parte del formulario -->
 
 
-
+                  <!--2.2 Haberes-->
                   <div class="tab-pane fade" id="v-pills-2" role="tabpanel" aria-labelledby="v-pills-2-tab" tabindex="0">
-                    Link 2
+                    <!-- Haberes Imponibles y No Tributables -->
+                  <div>
+                    <!-- Título -->
+                    <h4 class="fw-bold mt-5">Haberes imponibles y no tributables</h4>
+
+                    <!-- Formulario -->
+                    <form class="row g-4 mt-3">
+                      <!-- Subsidio por incapacidad laboral (2201) -->
+                      <div class="col-12">
+                        <label for="subsidio-incapacidad" class="form-label fw-bold d-block">Subsidio por incapacidad laboral por licencia médica - total mensual (2201)</label>
+                        <input type="text" id="subsidio-incapacidad" class="form-control" placeholder="">
+                      </div>
+
+                      <!-- Beca de estudio (2202) -->
+                      <div class="col-12">
+                        <label for="beca-estudio" class="form-label fw-bold d-block">Beca de estudio (Art. 17 N°18 LIR) (2202)</label>
+                        <input type="text" id="beca-estudio" class="form-control" placeholder="">
+                      </div>
+
+                      <!-- Gratificaciones de zona (2203) -->
+                      <div class="col-12">
+                        <label for="gratificaciones-zona" class="form-label fw-bold d-block">Gratificaciones de zona (Art. 17 N°27) (2203) 
+                          <span class="badge-danger ms-2">OBLIGATORIO</span>
+                        </label>
+                        <input type="text" id="gratificaciones-zona" class="form-control" placeholder="">
+                      </div>
+
+                      <!-- Otros ingresos no constitutivos de renta (2204) -->
+                      <div class="col-12">
+                        <label for="otros-ingresos" class="form-label fw-bold d-block">Otros ingresos no constitutivos de renta (Art. 17 N°29 LIR) (2204)</label>
+                        <input type="text" id="otros-ingresos" class="form-control" placeholder="">
+                      </div>
+                    </form>
+
+                    <!-- Botones -->
+                    <div class="d-flex flex-column flex-md-row  gap-3 mt-4">
+                        <button type="button" class="btn btn-primary-secondary">
+                            <i class="fa-solid fa-chevron-left"></i> Anterior
+                        </button>
+                        <button type="button" class="btn btn-primary-secondary">
+                            Siguiente <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <button type="submit" class="btn btn-warning-primary">Terminar liquidación</button>
+                    </div>
                   </div>
+                  <!--2.2 FIN Haberes-->
+
+                  
+
+
+                  </div>
+                  <!---2.2 FIN -->
+
+                  <!--2.3 Haberes--->
                   <div class="tab-pane fade" id="v-pills-3" role="tabpanel" aria-labelledby="v-pills-3-tab" tabindex="0">
-                    LINK 3
+                    <!-- Haberes No Imponibles y No Tributables -->
+                    <div>
+                      <!-- Título -->
+                      <h4 class=" fw-bold mt-5">Haberes no imponibles y no tributables</h4>
+
+                      <!-- Formulario -->
+                      <form class="row g-4 mt-3">
+                        <!-- Primera Fila -->
+                        <div class="col-12 col-md-6">
+                          <label for="colacion-mensual" class="form-label fw-bold d-block">Colación total mensual (Art. 41) (2301)</label>
+                          <input type="text" id="colacion-mensual" class="form-control" placeholder="">
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="movilizacion-mensual" class="form-label fw-bold d-block">Movilización total mensual (Art. 41) (2302)</label>
+                          <input type="text" id="movilizacion-mensual" class="form-control" placeholder="">
+                        </div>
+
+                        <!-- Segunda Fila -->
+                        <div class="col-12 col-md-6">
+                          <label for="viaticos-mensual" class="form-label fw-bold d-block">Viáticos total mensual (Art. 41) (2303)</label>
+                          <input type="text" id="viaticos-mensual" class="form-control" placeholder="">
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="perdida-caja" class="form-label fw-bold d-block">Asignación de pérdida de caja total mensual (Art. 41) (2304)</label>
+                          <input type="text" id="perdida-caja" class="form-control" placeholder="">
+                        </div>
+
+                        <!-- Tercera Fila -->
+                        <div class="col-12 col-md-6">
+                          <label for="desgaste-herramienta" class="form-label fw-bold d-block">Asignación de desgaste herramienta total mensual (Art. 41) (2305)</label>
+                          <input type="text" id="desgaste-herramienta" class="form-control" placeholder="">
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="familiar-legal" class="form-label fw-bold d-block">Asignación familiar legal total mensual (Art. 41) (2311)</label>
+                          <input type="text" id="familiar-legal" class="form-control" placeholder="">
+                        </div>
+
+                        <!-- Cuarta Fila -->
+                        <div class="col-12 col-md-6">
+                          <label for="gastos-trabajo" class="form-label fw-bold d-block">Gastos por causa del trabajo (Art. 41) (2306)</label>
+                          <input type="text" id="gastos-trabajo" class="form-control" placeholder="">
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="gastos-residencia" class="form-label fw-bold d-block">Gastos por cambio de residencia (Art. 53) (2307)</label>
+                          <input type="text" id="gastos-residencia" class="form-control" placeholder="">
+                        </div>
+
+                        <!-- Quinta Fila -->
+                        <div class="col-12 col-md-6">
+                          <label for="sala-cuna" class="form-label fw-bold d-block">Sala cuna (Art. 203) (2308)</label>
+                          <input type="text" id="sala-cuna" class="form-control" placeholder="">
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="teletrabajo" class="form-label fw-bold d-block">Asignación trabajo a distancia o teletrabajo (2309)</label>
+                          <input type="text" id="teletrabajo" class="form-control" placeholder="">
+                        </div>
+
+                        <!-- Sexta Fila -->
+                        <div class="col-12 col-md-6">
+                          <label for="deposito-convenido" class="form-label fw-bold d-block">Depósito convenido hasta UF 900 (2347)</label>
+                          <input type="text" id="deposito-convenido" class="form-control" placeholder="">
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <label for="alojamiento" class="form-label fw-bold d-block">Alojamiento por razones de trabajo (Art. 17 N°14 LIR) (2310)</label>
+                          <input type="text" id="alojamiento" class="form-control" placeholder="">
+                        </div>
+
+                        <!-- Séptima Fila -->
+                        <div class="col-12">
+                          <label for="traslacion" class="form-label fw-bold d-block">Asignación de traslación (Art. 17 N°15 LIR) (2312)</label>
+                          <input type="text" id="traslacion" class="form-control" placeholder="">
+                        </div>
+                      </form>
+                    </div>
+                    <hr class="my-4">
+
+                    <!-- Cálculo de Indemnización por Feriado Legal (2313) -->
+                    <div>
+                      <!-- Subtítulo -->
+                      <h4 class="fw-bold mt-5">Cálculo de Indemnización por feriado legal (2313)</h4>
+                      <p>Le pedimos el ingreso de los siguientes valores para realizar el cálculo:</p>
+
+                      <!-- Formulario -->
+                      <form class="row g-4 mt-3">
+                        <!-- Nº de días feriados totales utilizados -->
+                        <div class="col-12 col-md-6">
+                          <label for="dias-feriados" class="form-label fw-bold d-block">N° de días feriados totales utilizados</label>
+                          <input type="text" id="dias-feriados" class="form-control" placeholder="Ingrese el valor">
+                        </div>
+
+                        <!-- Nº de días inhábiles -->
+                        <div class="col-12 col-md-6">
+                          <label for="dias-inhabiles" class="form-label fw-bold d-block">N° de días inhábiles</label>
+                          <input type="text" id="dias-inhabiles" class="form-control" placeholder="Ingrese el valor">
+                        </div>
+                      </form>
+
+                      <!-- Resultado del cálculo -->
+                      <div class="alert-success px-4 py-3 mt-4 row">
+                        <p class="fw-bold text-success-900 pb-3 ps-0">
+                          <i class="fa fa-arrow-right me-2 text-success-500"></i>Valor total del cálculo
+                        </p>
+                        <p class=" text-gray-900 pb-2 ps-0">Indemnización por feriado legal (2313)</p>
+                        <input type="text" id="valor-total-feriado-legal" class="form-control mt-2" placeholder="00000" disabled>
+                      </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <!-- Gratificación Mensual y Recargo del 30% -->
+                    <div>
+                      <!-- Formulario -->
+                      <form class="row g-4 mt-2">
+                          <!-- Primera fila -->
+                          <div class="col-12 col-md-6">
+                              <label for="gratificacion-mensual-1" class="form-label fw-bold d-block">Gratificación (mensual) (2106)</label>
+                              <input type="text" id="gratificacion-mensual-1" class="form-control" placeholder="Ingrese el valor">
+                          </div>
+                          <div class="col-12 col-md-6">
+                              <label for="recargo-domingo-1" class="form-label fw-bold d-block">Recargo 30% día domingo (Art. 38) (2107)</label>
+                              <input type="text" id="recargo-domingo-1" class="form-control" placeholder="Ingrese el valor">
+                          </div>
+
+                          <!-- Segunda fila -->
+                          <div class="col-12 col-md-6">
+                              <label for="gratificacion-mensual-2" class="form-label fw-bold d-block">Gratificación (mensual) (2106)</label>
+                              <input type="text" id="gratificacion-mensual-2" class="form-control" placeholder="Ingrese el valor">
+                          </div>
+                          <div class="col-12 col-md-6">
+                              <label for="recargo-domingo-2" class="form-label fw-bold d-block">Recargo 30% día domingo (Art. 38) (2107)</label>
+                              <input type="text" id="recargo-domingo-2" class="form-control" placeholder="Ingrese el valor">
+                          </div>
+                      </form>
+
+                      <!-- Botones -->
+                      <div class="d-flex flex-column flex-md-row gap-3 mt-4">
+                          <button type="button" class="btn btn-primary-secondary">
+                              <i class="fa-solid fa-chevron-left"></i> Anterior
+                          </button>
+                          <button type="button" class="btn btn-primary-secondary">
+                              Siguiente <i class="fa-solid fa-chevron-right"></i>
+                          </button>
+                          <button type="submit" class="btn btn-warning-primary">Terminar liquidación</button>
+                      </div>
+                    </div>
+
+
+
+
+
                   </div>
+                  <!---2.3 FIN -->
+
+                  <!---2.3 haberes-->
                   <div class="tab-pane fade" id="v-pills-4" role="tabpanel" aria-labelledby="v-pills-4-tab" tabindex="0">
-                    LINK 4
+                    <!-- Haberes No Imponibles y Tributables -->
+                    <div>
+                      <!-- Título -->
+                      <h4 class="fw-bold mt-5">Haberes no imponibles y tributables</h4>
+
+                      <!-- Formulario -->
+                      <form class="row g-4 mt-3">
+                        <!-- Indemnizaciones voluntarias tributables -->
+                        <div class="col-12">
+                          <label for="indemnizaciones-voluntarias" class="form-label fw-bold d-block">Indemnizaciones voluntarias tributables (2417)</label>
+                          <input type="text" id="indemnizaciones-voluntarias" class="form-control" placeholder="Ingrese el valor">
+                        </div>
+
+                        <!-- Indemnizaciones contractuales tributables -->
+                        <div class="col-12">
+                          <label for="indemnizaciones-contractuales" class="form-label fw-bold d-block">Indemnizaciones contractuales tributables (2418)</label>
+                          <input type="text" id="indemnizaciones-contractuales" class="form-control" placeholder="Ingrese el valor">
+                        </div>
+                      </form>
+
+                      <!-- Botones -->
+                      <div class="d-flex flex-column flex-md-row gap-3 mt-4">
+                        <button type="button" class="btn btn-primary-secondary">
+                          <i class="fa-solid fa-chevron-left"></i> Anterior
+                        </button>
+                        <button type="button" class="btn btn-primary-secondary">
+                          Siguiente <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        <button type="submit" class="btn btn-warning-primary">Terminar liquidación</button>
+                      </div>
+                    </div>
+
                   </div>
+                  <!--FIN Haberes-->
+
                 </div>
 
               </div>
